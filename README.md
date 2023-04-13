@@ -1,40 +1,83 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Movies 
 
-## Getting Started
+## Ссылка для демонстрации проекта
 
-First, run the development server:
+https://movies-next-sooty.vercel.app/
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+## Ссылка на дизайн проекта
+
+https://www.figma.com/file/GXMByJw60pzmTnNYGebgCt/Diploma-(Copy)?node-id=932%3A4503&t=RqYwZk54hmsEhpbQ-1
+
+## Описание
+
+Фронтенд на next.js для сервиса поиска фильмов Movies с возможностью аутентификации пользователей, сохранения фильмов в избранном и поиском фильмов по ключевым словам.
+
+После обновления сайта на Next.js,в некторых случаях средняя скорость первоначальной загрузки сайта возросла практически в 2 раза.
+
+Поле | DOMContentLoaded | Load
+-----|------------------|-----
+Next.js | 432 ms  | 696 ms
+React.js | 694 ms | 1371 ms
+
+## Функционал
+
+- Адаптивный дизайн под все разрешения устройств
+- У всех интерактивных элементов есть анимация
+- Регистрация и авторизация пользователя
+- Вид шапки меняется в зависимости от авторизации
+- Пользователь получает сообщение в случае любой ошибки
+- При поиске текст запроса, найденные фильмы и состояние переключателя короткометражек сохраняются в хранилище
+- Поля формы заблокированы во время отправки запросов, и у пользователя нет возможности отправить новый запрос до завершения предыдущего
+- Все формы валидируются на стороне клиента, пользователь не может отправить запрос с невалидными данными
+- Редактирование профиля (имя, электронная почта)
+- Пользователю отображается уведомление об успешном запросе к серверу при сохранении профиля
+- Если на странице редактирования профиля введённая информация соответствует текущим данным пользователя, кнопка «Сохранить» заблокирована и нельзя отправить запрос сохранения
+- Прелоадер крутится во время выполнения запроса фильмов
+- Если карточки уже были отображены на странице в блоке результатов, клик по чекбоксу «Короткометражки» приводит к повторной фильтрации результата
+- Для оптимизации запрос на получение всех фильмов выполняется только один раз, после чего они сохраняются в локальном хранилище
+- Сетка фильмов зависит от ширины экрана. При клике на кнопку «Ещё» отобразится 3,2 или 5 фильмов, в зависимости от того, сколько их отображается в одной строке
+- Сохранение/удаление фильмов из вкладки схранённые фильмы
+- При клике на постер фильма в новой вкладке открывает трейлер
+- При попытке перейти на любой защищённый роут происходит редирект на главную страницу
+- Если пользователь был авторизован и закрыл вкладку, он может вернуться сразу на любую страницу приложения по URL-адресу, кроме страниц авторизации и регистрации
+- При попытке перейти на несуществующую страницу происходит редирект на страницу «404»
+
+## Технологии
+
+- Next.js
+- Хуки (useState, useEffect, useContext)
+- Использование хука useFrom для мгновенной валидации полей
+- Использование локального хранилища
+- Работа с API
+- HOC-компоненты
+- БЭМ,
+- Ипользование препроцессора SCSS
+- Контроль версий в Git с использованием веток.
+
+## Инструкция
+
+Чтобы запустить проект, нужно сделать несколько простых шагов.
+
+- Создайте папку и перейдите в неё:
+
+```
+cd <Имя-папки>
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Склонируйте этот репозиторий:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```
+git clone https://github.com/AndreiSalnikov/movies-next.git
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- Установите все зависимости:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```
+yarn или npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Теперь можете запустить проект:
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# movies-next
-Фронтенд на next.js для сервиса поиска фильмов Movie Explorer с возможностью аутентификации пользователей, сохранения фильмов в избранном и поиском фильмов по ключевым словам.
+```
+npm run dev и перейти на http://localhost:3000
+```
