@@ -29,7 +29,7 @@
   }
 
   &__button {
-    background-image: url("../../../public/images/movies/moviesLike.svg");
+    background-image: url("../../images/movies/moviesLike.svg");
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-color: #313131;
@@ -45,11 +45,11 @@
     }
 
     &_delete {
-      background-image: url("../../../public/images/movies/moviesDelete.svg");
+      background-image: url("../../images/movies/moviesDelete.svg");
     }
 
     &_active {
-      background-image: url("../../../public/images/movies/moviesLike_active.svg");
+      background-image: url("../../images/movies/moviesLike_active.svg");
       background-color: #3DDC84;
     }
 

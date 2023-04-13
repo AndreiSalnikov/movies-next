@@ -103,8 +103,6 @@
       color: #2BE080;
       opacity: 0.7;
     }
-
-
   }
 
   &__logo {
@@ -112,7 +110,7 @@
     width: 310px;
     height: 304px;
     background-size: contain;
-    background-image: url("../../../public/images/promo/promoLogo.png");
+    background-image: url("../../images/promo/promoLogo.png");
 
     @media screen and (max-width: 768px) {
       margin-top: 140px;
