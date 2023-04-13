@@ -1,0 +1,196 @@
+.profile {
+  display: flex;
+  justify-content: center;
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    max-width: 410px;
+    width: 100%;
+  }
+
+  &__title {
+    text-align: center;
+    margin: 74px auto 123px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #fff;
+
+    @media screen and (max-width: 768px) {
+      margin: 236px auto 96px;
+    }
+
+    @media screen and (max-width: 450px) {
+      margin: 70px auto 80px;
+    }
+
+  }
+
+  &__line {
+    padding-bottom: 16px;
+    border-bottom: 1px solid #424242;
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: 450px) {
+      margin: 0 30px;
+    }
+
+    &:last-of-type {
+      padding: 19px 0 0 0;
+      border-bottom: none;
+
+      @media screen and (max-width: 450px) {
+        padding: 19px 30px 0;
+      }
+
+    }
+  }
+
+  &__failed {
+    margin: 10px 0 20px 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    height: 12px;
+    color: #FF3055;
+    opacity: 0;
+    transition: opacity .3s ease-out;
+
+    &_active {
+      opacity: 1;
+    }
+  }
+
+  &__success {
+    margin: 0 0 176px 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    height: 12px;
+    color: #FF3055;
+    opacity: 0;
+
+    @media screen and (max-width: 768px) {
+      margin-bottom: 156px;
+    }
+
+
+    @media screen and (max-width: 450px) {
+      margin-bottom: 325px;
+    }
+
+    &_active {
+      opacity: 1;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 13px;
+    color: #fff;
+  }
+
+  &__input {
+    min-width: 224px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 13px;
+    background: #2F2F2F;
+    color: #fff;
+    border: none;
+    text-align: end;
+    height: 15px;
+    padding: 0;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__edit {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    text-align: center;
+    margin: 0 0 16px 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    color: #fff;
+    transition: opacity .3s ease-out;
+
+    @media screen and (max-width: 450px) {
+      font-size: 12px;
+      line-height: 15px;
+    }
+
+    &:not(&__type_disabled):hover {
+      cursor: pointer;
+      opacity: 0.7;
+    }
+
+    &__type_disabled {
+      color: rgb(253 253 253 / 42%);
+    }
+  }
+
+
+  &__logout {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: #EE3465;
+    transition: opacity .3s ease-out;
+
+    @media screen and (max-width: 450px) {
+      font-size: 12px;
+      line-height: 15px;
+    }
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.7;
+    }
+  }
+
+  &__validate {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__error {
+    max-width: 224px;
+    color: red;
+    padding-top: 10px;
+    height: 30px;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 15px;
+    opacity: 0;
+    transition: opacity .3s ease-out;
+
+    &_active {
+      opacity: 1;
+    }
+
+  }
+
+}

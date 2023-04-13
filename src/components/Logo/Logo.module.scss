@@ -1,0 +1,17 @@
+.logo {
+  display: block;
+  width: 38px;
+  height: 38px;
+  background-image: url("../../../Public/images/header/headerLogo.svg");
+  transition: opacity .3s ease-out;
+
+  &__type_center {
+    @media screen and (max-width: 450px) {
+      margin: 0 auto;
+    }
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+}

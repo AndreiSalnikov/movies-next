@@ -1,0 +1,222 @@
+.header {
+  background: #073042;
+  display: flex;
+  padding: 18px 70px;
+  justify-content: space-between;
+  align-items: center;
+
+  @media screen and (max-width: 768px) {
+    padding: 18px 30px;
+  }
+
+  @media screen and (max-width: 674px) {
+    padding: 18px 14px;
+  }
+
+  &__profile {
+    background: #202020;
+  }
+
+  &__logo {
+    display: block;
+    width: 38px;
+    height: 38px;
+    background-image: url("../../../public/images/header/headerLogo.svg");
+    transition: opacity .3s ease-out;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    padding-left: 60px;
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+
+  }
+
+  &__movies {
+    margin-right: 16px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    color: #fff;
+    text-decoration: none;
+    transition: all .3s ease-out;
+
+    &_active {
+      font-weight: 500;
+    }
+
+    &:hover {
+      color: #2BE080;
+      opacity: 0.7;
+    }
+  }
+
+
+  &__saved {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    color: #fff;
+    text-decoration: none;
+    transition: all .3s ease-out;
+
+    &:hover {
+      color: #2BE080;
+      opacity: 0.7;
+    }
+  }
+
+  &__account {
+    display: flex;
+    background-color: #000;
+    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.08);
+    border-radius: 40px;
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+
+  }
+
+  &__link {
+    display: flex;
+    padding: 3px 3px 3px 11px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 12px;
+    color: #fff;
+    text-decoration: none;
+    align-items: center;
+    transition: all .3s ease-out;
+
+    &:hover {
+      cursor: pointer;
+      color: #2BE080;
+      opacity: .8;
+    }
+  }
+
+  &__man {
+    margin-left: 8px;
+    background-color: #313131;;
+    background-image: url("../../../public/images/header/headerLogoMan.svg");
+    background-position: 53% 51%;
+    height: 26px;
+    width: 26px;
+    background-repeat: no-repeat;
+    border-radius: 50px;
+  }
+
+  &__authorization {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__registration {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: #fff;
+    text-decoration: none;
+    transition: all .3s ease-out;
+
+    @media screen and (max-width: 674px) {
+      font-size: 10px;
+    }
+
+    &:hover {
+      color: #2BE080;
+      opacity: 0.7;
+    }
+  }
+
+  &__login {
+    display: block;
+    margin-left: 30px;
+    background: #3DDC84;
+    border-radius: 3px;
+    padding: 8px 20px;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: #000000;
+    transition: opacity .3s ease-out;
+
+    @media screen and (max-width: 674px) {
+      padding: 5px 12px;
+      font-size: 10px;
+      margin-left: 14px;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__burger {
+    position: fixed;
+    right: 30px;
+    display: none;
+    background: transparent;
+    border: none;
+
+    @media screen and (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @media screen and (max-width: 674px) {
+      right: 14px;
+    }
+
+    @media screen and (max-width: 320px) {
+      right: 17px;
+    }
+  }
+
+  &__line {
+    background-color: #fff;
+    display: block;
+    height: 3px;
+    margin: 4px auto 4px;
+    transition: all .2s;
+    width: 28px;
+
+    @media screen and (max-width: 320px) {
+      margin: 4px auto 3px;
+      width: 22px;
+      height: 2.5px;
+    }
+
+    &_active:first-child {
+      transform: rotate(-45deg);
+    }
+
+    &_active:nth-child(2) {
+      opacity: 0;
+      transform: rotate(45deg);
+    }
+
+    &_active:last-of-type {
+      margin-top: -18px;
+      transform: rotate(45deg);
+    }
+
+  }
+
+
+}

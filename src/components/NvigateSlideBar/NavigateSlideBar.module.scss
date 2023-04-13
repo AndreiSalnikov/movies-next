@@ -1,0 +1,140 @@
+.bar {
+  transition: right .3s ease-out;
+  min-width: 520px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: fixed;
+  align-items: flex-end;
+  right: -548px;
+  top: 0;
+  z-index: 1;
+  height: 100vh;
+  background: #202020;
+
+  @media screen and (max-width: 520px) {
+    max-width: 320px;
+    min-width: 0;
+  }
+
+  &_active {
+    right: 0;
+  }
+
+  &__close {
+    min-height: 22px;
+    justify-content: center;
+    margin: 22.44px 22.44px 113.44px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background: transparent;
+    border: none;
+
+    @media screen and (max-width: 520px) {
+      margin: 17.44px 11.44px 105.44px 0;
+    }
+
+  }
+
+  &__line {
+    background-color: #fff;
+    display: block;
+    height: 3px;
+    transition: all .2s;
+    width: 24px;
+
+    &:first-child {
+      transform: rotate(-45deg);
+    }
+
+    &:nth-child(2) {
+      margin-top: -3px;
+      transform: rotate(45deg);
+    }
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 90px;
+    min-width: 340px;
+    text-align: center;
+
+    @media screen and (max-width: 520px) {
+      margin: 0 10px;
+      min-width: 300px;
+    }
+
+
+  }
+
+  &__link {
+    max-width: 200px;
+    text-decoration: none;
+    padding-bottom: 3px;
+    margin-bottom: 26px;
+    font-size: 18px;
+    line-height: 22px;
+    color: #fff;
+
+
+    @media screen and (max-width: 520px) {
+      margin-bottom: 19px;
+      padding-bottom: 4px
+    }
+
+    &_active {
+      border-bottom: 2px solid #fff;
+    }
+
+    &:last-of-type {
+      padding-bottom: 0;
+      margin-bottom: 618px;
+
+      @media screen and (max-width: 520px) {
+        margin-bottom: 444px;
+      }
+
+    }
+  }
+
+  &__account {
+    margin: 0 210px;
+    display: flex;
+    background-color: #000;
+    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.08);
+    border-radius: 40px;
+
+    @media screen and (max-width: 520px) {
+      margin: 0 110px;
+    }
+
+  }
+
+  &__man {
+    margin-left: 8px;
+    background-color: #313131;;
+    background-image: url("../../../Public/images/header/headerLogoMan.svg");
+    background-position: 53% 51%;
+    height: 26px;
+    width: 26px;
+    background-repeat: no-repeat;
+    border-radius: 50px;
+  }
+
+  &__profile {
+    display: flex;
+    padding: 3px 3px 3px 11px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 12px;
+    color: #fff;
+    text-decoration: none;
+    align-items: center;
+    transition: all 0.3s ease-out;
+  }
+
+}

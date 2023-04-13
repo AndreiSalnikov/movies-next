@@ -1,0 +1,47 @@
+.checkbox {
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 20px;
+  outline: none;
+
+  &__input {
+    position: absolute;
+    top: -99999px;
+    left: -99999px;
+  }
+
+  &__slider {
+    width: 36px;
+    height: 20px;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #EBEBEB;
+    border-radius: 20px;
+    transition: background-color 0.4s ease-in-out;
+
+    &:before {
+      position: absolute;
+      content: "";
+      height: 8px;
+      width: 8px;
+      left: 6px;
+      bottom: 6px;
+      background-color: #fff;
+      border-radius: 50%;
+      transition: transform 0.4s ease-in-out;
+    }
+
+    &_active {
+      background-color: #2BE080;
+
+      &:before {
+        transform: translateX(16px);
+      }
+    }
+  }
+}

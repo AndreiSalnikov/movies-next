@@ -1,0 +1,153 @@
+.login {
+  margin: 0 auto;
+  padding: 70px 0;
+  max-width: 396px;
+
+  @media screen and (max-width: 768px) {
+    padding: 232px 0;
+  }
+
+  @media screen and (max-width: 450px) {
+    padding: 56px 0 30px 0;
+    max-width: 260px;
+  }
+
+  &__title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #fff;
+    margin: 40px 0;
+
+    @media screen and (max-width: 450px) {
+      margin: 50px 0 80px 0;
+      text-align: center;
+    }
+
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  &__placeholder {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    color: #8B8B8B;
+    margin: 0 0 10px 0;
+  }
+
+  &__input {
+    color: #fff;
+    background: #2F2F2F;
+    border-radius: 8px;
+    height: 46px;
+    padding: 0;
+    border: none;
+    margin: 0 0 2px 0;
+
+
+  }
+
+  &__error {
+    color: red;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 15px;
+    height: 18px;
+    opacity: 0;
+    transition: opacity .3s ease-out;
+
+    &_active {
+      opacity: 1;
+    }
+
+  }
+
+  &__failed {
+    margin-bottom: 147px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    height: 12px;
+    color: #FF3055;
+    opacity: 0;
+    transition: opacity .3s ease-out;
+
+    @media screen and (max-width: 450px) {
+      margin-bottom: 235px;
+    }
+
+    &_active {
+      opacity: 1;
+    }
+  }
+
+  &__button {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #fff;
+    padding: 13px 177px 15px;
+    background-color: #4285F4;
+    border-radius: 3px;
+    border: none;
+    transition: opacity .3s ease-out;
+
+    @media screen and (max-width: 450px) {
+      font-size: 12px;
+      line-height: 15px;
+      padding: 15px 112px;
+    }
+
+    &:not(&__type_disabled):hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+
+    &__type_disabled {
+      background-color: rgb(253 253 253 / 42%);
+    }
+
+  }
+
+  &__offer {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #8B8B8B;
+    text-align: center;
+    margin: 16px 0 0 0;
+
+    @media screen and (max-width: 450px) {
+      margin: 14px 0 0 0;
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+
+  &__registration {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #4285F4;
+    text-decoration: none;
+
+    @media screen and (max-width: 450px) {
+      font-size: 12px;
+      line-height: 15px;
+    }
+
+  }
+
+}
